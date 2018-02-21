@@ -18,10 +18,10 @@ public class CardController {
         this.cardService = cardService;
     }
 
-    @RequestMapping(value = "/getCard", method = RequestMethod.GET, produces = "application/json")
-    public Card getCard(@RequestParam(required = true) Integer minAmtWthdrw){
+    @RequestMapping(value = "/withdraw", method = RequestMethod.GET, produces = "application/json")
+    public Card withdraw(@RequestParam(required = true) Integer minAmtWthdrw){
         Card card = Card.builder().minAmtWthdrw(minAmtWthdrw).build();
-        return cardService.test(card);
+        return cardService.withdraw(card);
     }
 
 }

@@ -18,8 +18,7 @@ public class CardService {
         this.kieContainer = kieContainer;
     }
 
-    public Card test(Card card){
-
+    public Card withdraw(Card card){
         WrkFlwUtil wrkFlwUtil = new WrkFlwUtil(kieContainer);
         Card card1 = wrkFlwUtil.loadKieSession(card,"ksession-rule");
 
